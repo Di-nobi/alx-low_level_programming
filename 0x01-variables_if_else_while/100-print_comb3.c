@@ -8,8 +8,10 @@ int main(void)
 	int a, b = '0', c;
 
 	for (a = '0'; a <= '9'; a++)
-{	for (c = b; c <= '9'; c++)
-{	if (a != c)
+{	
+	for (c = b; c <= '9'; c++)
+{	
+	if (a != c)
 {	putchar(a);
 	putchar(c);
 }
