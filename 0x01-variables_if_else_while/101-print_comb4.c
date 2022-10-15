@@ -18,7 +18,7 @@ int main(void)
 	putchar(i);
 	putchar(t);
 	putchar(a);
-	if (i =='7' && t == '8' && a == '9')
+	if (i == '7' && t == '8' && a == '9')
 {
 	break;
 }
