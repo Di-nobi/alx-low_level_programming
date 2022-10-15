@@ -1,1 +1,1 @@
-P/N
+digit
