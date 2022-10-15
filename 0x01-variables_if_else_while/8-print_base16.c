@@ -4,7 +4,7 @@
  *main-program entry point.
  *Return:0 if no error, non zeroif error.
  */
-int main (void)
+int main(void)
 {
 	int x;
 	char hexvalues[] = "0123456789abcdef";
