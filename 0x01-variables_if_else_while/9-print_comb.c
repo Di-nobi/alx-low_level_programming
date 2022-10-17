@@ -10,9 +10,9 @@ int main(void)
 
 	num = '0';
 
-	while (num <= '9';)
+	while (num <= '9')
 {	putchar(num);
-	num++;
+	num++i;
 	if (num == '9')
 {	break;
 }
