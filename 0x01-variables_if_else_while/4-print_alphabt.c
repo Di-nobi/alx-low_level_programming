@@ -8,12 +8,15 @@ int main(void)
 {
 	char x;
 
-	for (x = 'a'; x <= 'z'; x++)
+	x = 'a';
+
+	do
 {
 	if (x == 'e' || x == 'q')
-	continue;
-	putchar(x);
-}
+		break;
+		putchar(x);
+		x++;
+}	while (x <= 'z')
 	putchar('\n');
 	return (0);
 }
