@@ -1,4 +1,6 @@
 #include "main.h"
+#include <unistd.h>
+#include <stdio.h>
 /**
  * main-program entry point
  * Return:0 no errors, none error.
@@ -6,14 +8,13 @@
 
 int main(void)
 {
-	_putchar(_);
-	_putchar(p);
-	_putchar(u);
-	_putchar(t);
-	_putchar(c);
-	_putchar(h);
-	_putchar(a);
-	_putchar(r);
-	_putchar('\n');
+	char nest[9] = "_putchar";
+	int a;
+
+	for (a = 0; a < 9; a++)
+{
+	putchar(nest[a]);
+}
+	putchar('\n');
 	return (0);
 }
