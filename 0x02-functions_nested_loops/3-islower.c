@@ -10,12 +10,12 @@
 int _islower(int c)
 {
 	char x;
-	int low = 0;
+	int lower = 0;
 
 	x = 'a';
 	while (x <= 'z')
 {
 	if ( x == c)
-	low = 1;
-}	return (low);
+	lower = 1;
+}	return (lower);
 }
