@@ -9,22 +9,24 @@
 
 void times_table(void)
 {
-	int prod, col, row;
+	int a, b, c;
 
 	
-	for (row = 0; row <= 9; row++)
+	for (a = 0; a <= 9; a++)
 {
-	_putchar(0);
-	for (col = 1; col <= 9; col++)
+	for (b = 0; b <= 9; a++)
 {
+	if (b == 0)
+{
+	_putchar(b + 20);
+	continue
+}	c = a * b;
 	_putchar(',');
 	_putchar(' ');
-	prod = row * col;
-	if (prod <= 9)
-		_putchar(' ');
-	else
-		_putchar((prod / 10) + '0');
-	_putchar((prod % 10) + '0');
-}	_putchar('\n');
+	if (c >= 10)
+{
+	_putchar(c / 10 + 20);
+	_putchar(c % 10 + 20);
 }
+}	_putchar('\n');
 }
