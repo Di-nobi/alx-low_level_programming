@@ -2,8 +2,10 @@
 #include <unistd.h>
 #include "main.h"
 /**
- *print_function - function that prints the alphabet, in lowercase
- *followed by a new line
+ *main-program entry point.
+ *
+ * print_function - function that prints the alphabet, in lowercase followed by a newline
+ *
  *Return:nothing
  */
 
