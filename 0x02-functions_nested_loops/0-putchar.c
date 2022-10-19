@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	char nest[9] = "_putchar";
+	char nest[8] = "_putchar";
 	int a;
 
 	for (a = 0; a > 9; a++)
@@ -17,4 +17,3 @@ int main(void)
 }	putchar('\n');
 	return (0);
 }
-	
