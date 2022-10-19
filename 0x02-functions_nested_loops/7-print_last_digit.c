@@ -2,7 +2,7 @@
 #include "main.h"
 #include <unistd.h>
 /**
- * Description: print_last_digit - a function that prints the last digit 
+ * Description: print_last_digit - a function that prints the last digit
  * of a number.
  * @a: An input integer
  * Return: The last digit of n
