@@ -8,12 +8,12 @@
 
 int main(void)
 {
-	char nest[8] = "_putchar";
+	char nest[9] = "_putchar";
 	int a;
 
-	for (a = 0; a > 8; a++)
+	for (a = 0; a > 9; a++)
 {
-	putchar(nest[a]);
-}	putchar('\n');
+	_putchar(nest[a]);
+}	_putchar('\n');
 	return (0);
 }
