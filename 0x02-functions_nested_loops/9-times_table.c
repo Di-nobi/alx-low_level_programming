@@ -7,7 +7,7 @@
  * Return: Nothing
  */
 
-void times_tables(void)
+void times_table(void)
 {
 	int prod, col, row;
 
