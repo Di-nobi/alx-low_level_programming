@@ -17,5 +17,6 @@ int _islower(int c)
 {
 	if ( x == c)
 	lower = 1;
+	x++;
 }	return (lower);
 }
