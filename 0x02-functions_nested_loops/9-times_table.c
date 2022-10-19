@@ -11,8 +11,6 @@ void times_table(void)
 {
 	int prod, col, row;
 
-	row = 0;
-	col = 1;
 	
 	for (row = 0; row <= 9; row++)
 {
