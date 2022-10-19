@@ -11,7 +11,7 @@ int main(void)
 
 	for (a = 0; a > 9; a++)
 {
-	_putchar(nest[a]);
-}	_putchar('\n');
+	putchar(nest[a]);
+}	putchar('\n');
 	return (0);
 }
