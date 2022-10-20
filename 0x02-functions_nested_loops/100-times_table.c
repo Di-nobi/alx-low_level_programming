@@ -9,11 +9,11 @@
 
 void print_times_table(int n)
 {
-	int r, c, p;
+	int r = 0, c, p;
 
 	if (n > 15 || n < 0)
 		return;
-		for (r = 0; r <= n; r++)
+		while (r <= n)
 {
 	for (c = 0; c <= n; c++)
 {
@@ -44,5 +44,6 @@ void print_times_table(int n)
 	_putchar(' ');
 }
 }_putchar('\n');
+	r++;
 }
 }
