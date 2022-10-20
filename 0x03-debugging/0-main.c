@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * main - tests function that prints integer if is positive or negative
- * Return:0
+ * Return: 0
  */
 
 int main(void)
@@ -11,5 +11,6 @@ int main(void)
 
 	x = 0;
 	positive_or_negative(x);
+
 	return (0);
 }
