@@ -13,18 +13,18 @@ int main(void)
 	v = 1;
 	w = 2;
 	c = 3;
-	s = 2;
+	x = 2;
 
 	d = 2;
 	while (d <= 32)
 {
 	if (c % 2 == 0)
-	s = s + c;
+	x = x + c;
 	v = w;
 	w = c;
-	c = a + b;
+	c = v + w;
 	d++;
 }
-	printf("%u\n", s);
+	printf("%u\n", x);
 	return (0);
 }
