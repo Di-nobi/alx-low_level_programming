@@ -14,7 +14,7 @@ int main(void)
 	b = 2;
 	c = 1;
 
-	while (c <= 50)
+	while (up <= 50)
 {
 	if (a != 21474836447)
 {
@@ -24,9 +24,9 @@ int main(void)
 {
 	printf("%li\n", a);
 }
-	up = a + b;
 	a = b;
-	b = up;
+	b = c;
+	c = a + b;
 	c++;
 }
 	return (0);
