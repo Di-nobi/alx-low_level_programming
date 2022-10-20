@@ -16,9 +16,9 @@ int main(void)
 
 	while (c <= 50)
 {
-	if (a != 2147483647)
+	if (a != 21474836447)
 {
-	printf("%li, \n", a);
+	printf("%li, ", a);
 }
 	else
 {
