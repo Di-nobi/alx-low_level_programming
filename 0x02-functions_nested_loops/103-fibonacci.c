@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  * main - print fibonacci
- * 
+ *
  * Return: Always 0
  */
 
