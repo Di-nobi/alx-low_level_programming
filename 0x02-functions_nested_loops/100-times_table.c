@@ -10,10 +10,12 @@
 void print_times_table(int n)
 {
 	int x;
+
 	x = 0;
 
 	if (n <= 15 && n >= 0)
-{	while (x <= n)
+{
+	while (x <= n)
 {	int y = 1;
 
 	_putchar(48);
