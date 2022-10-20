@@ -18,7 +18,7 @@ int main(void)
 {
 	if (a != 2147483647)
 {
-	printf("%li ", a);
+	printf("%li, \n", a);
 }
 	else
 {
