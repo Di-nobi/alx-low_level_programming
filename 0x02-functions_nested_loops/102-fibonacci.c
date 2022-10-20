@@ -12,22 +12,17 @@ int main(void)
 
 	a = 1;
 	b = 2;
-	c = 1;
+	c = 3;
 
-	while (up <= 50)
+	printf("%ld, ", a);
+	printf("%ld, ", b);
+	for (up = 3; up < 50; up++)
 {
-	if (a != 21474836447)
-{
-	printf("%li, ", a);
-}
-	else
-{
-	printf("%li\n", a);
-}
+	printf("%ld, ", c);
 	a = b;
 	b = c;
 	c = a + b;
-	c++;
 }
+	printf("%ld\n", c);
 	return (0);
 }
