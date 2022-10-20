@@ -3,6 +3,7 @@
  * main - main entry point
  * Description: 102-fibonacci.c - a program that prints the first 50 fibonacci
  * numbers, starting with 1 and 2, followed by a new line.
+ * Return:0 Always.
  */
 
 int main(void)
@@ -17,7 +18,7 @@ int main(void)
 {
 	if (a != 2147483647)
 {
-	printf("%li, ", a);
+	printf("%li ", a);
 }
 	else
 {
