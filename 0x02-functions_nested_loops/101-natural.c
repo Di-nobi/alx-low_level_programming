@@ -25,6 +25,6 @@ int main(void)
 	a += i;
 }
 }
-	printf("%i\n", total);
+	printf("%i\n", a);
 	return (0);
 }
