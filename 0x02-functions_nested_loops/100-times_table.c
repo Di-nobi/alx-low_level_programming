@@ -21,14 +21,14 @@ void print_times_table(int n)
 	if ( p > 99)
 {
 	_putchar(p / 100 + 48);
-	_putchar(p / 10 % 10 + 48);
-	_putchar(p % 10 + 48);
+	_putchar(((p / 10) % 10) + 48);
+	_putchar((p % 10) + 48);
 }
 	else if (p > 9)
 {
 	_putchar(' ');
-	_putchar(p / 10 + 48);
-	_putchar(p % 10 + 48);
+	_putchar((p / 10) + 48);
+	_putchar((p % 10) + 48);
 }
 	else if (c != 0)
 {
