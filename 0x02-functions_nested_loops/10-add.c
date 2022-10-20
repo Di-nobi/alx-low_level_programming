@@ -2,7 +2,7 @@
 #include "main.h"
 #include <unistd.h>
 /**
- * Description: Add - a function that adds two integers and return the result
+ * Description: add - a function that adds two integers
  * @a: The first number
  * @b: The second number
  * Return: The sum of the two integers
