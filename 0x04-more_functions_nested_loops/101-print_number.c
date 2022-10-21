@@ -3,7 +3,10 @@
 /**
  * print_number - This prints an integer
  * @n: integer
+ * Return: void
  */
+
+
 void print_number(int n)
 {
 	unsigned int a, b, count;
