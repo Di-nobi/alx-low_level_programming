@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * more_numbers - print 10 times the numbers since 0 up to 14
  * put _putchar just three times
@@ -16,7 +17,9 @@ void more_numbers(void)
 	if (b > 9)
 {
 	putchar((y / 10) + '0');
-}	putchar((y % 10) + '0');
 }	
-}	putchar('\n');
+	putchar((y % 10) + '0');
+}
+	putchar('\n');
+}
 }
