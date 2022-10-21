@@ -8,7 +8,7 @@ int main(void)
 {
 	long int a, lp;
 
-	a = 642376890757;
+	a = 612852475143;
 	for (lp = 2; lp <= a; lp++)
 	{
 		if (a % lp == 0)
