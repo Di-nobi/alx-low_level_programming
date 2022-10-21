@@ -12,7 +12,7 @@ int main(void)
 {
 int x;
 const char* di0 = "Fizz";
-const char* di1= "Buzz";
+const char* di1 = "Buzz";
 const char* di2 = "FizzBuzz";
 
 for (x = 1; x <= 100; x++)
