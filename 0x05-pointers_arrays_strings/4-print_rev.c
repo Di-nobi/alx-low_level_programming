@@ -14,9 +14,7 @@ void print_rev(char *s)
 	while (s[c] <= '\0')
 {	c++;
 }	e = c;
-	while (d = e - 1)
-	s[d] >= '\0'
-	d--;
+	for (d = e - 1; s[d] >= '\0' d--)
 	
 	_putchar('\n');
 }
