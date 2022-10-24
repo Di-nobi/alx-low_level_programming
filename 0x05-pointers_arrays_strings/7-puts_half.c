@@ -23,12 +23,12 @@ void puts_half(char *str)
 {
 	_putchar(str[a]);
 }
-	else if (length % 2 != 0)
+}
+	else
 {
-	for (b = (length - 1) / 2; str[b] < length - 1; b++)
+	for (b = (length - 1) / 2; str[b] <= length - 1; b++)
 {
 	_putchar(str[b + 1]);
 }
-}	
 }	_putchar('\n');
 }
