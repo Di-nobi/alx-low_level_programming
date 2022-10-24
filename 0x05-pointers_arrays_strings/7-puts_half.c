@@ -11,10 +11,11 @@ void puts_half(char *str)
 
 	length = 0;
 
-	do{
+	do {
 
 	length++;
 }
+
 	while (str[length] != '\0');
 
 	if (length % 2 == 0)
