@@ -14,8 +14,8 @@ void reverse_array(int *a, int n)
 
 	for (x = 0; x < n / 2; x++)
 {
-	tmo = x[a];
-	x[a] = x[b];
-	x[b--] = tmo;
+	tmo = a[x];
+	a[x] = a[b];
+	a[b--] = tmo;
 }
 }
