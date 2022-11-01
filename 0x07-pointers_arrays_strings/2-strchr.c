@@ -5,8 +5,7 @@
  * _strchr - a function that locates a character in a string
  * @c: character of the first occurance
  * @s: string character
- * Return: a pointer to the first occurance of the character c in the string or
- * NULL if the character is not found
+ * Return: a pointer to the char*
  */
 
 char *_strchr(char *s, char c)
@@ -20,7 +19,5 @@ char *_strchr(char *s, char c)
 }
 	while (*s);
 
-	if (c == '\0')
-
-	return (NULL);
+	return (s);
 }
