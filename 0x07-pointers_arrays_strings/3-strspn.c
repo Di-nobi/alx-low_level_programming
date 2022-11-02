@@ -13,9 +13,9 @@ unsigned int _strspn(char *s, char *accept)
 	c = 0;
 
 	for (a = 0; s[a] != '\0'; a++)
-		if (s[a] != 32)
+		break;
 {
-	for (b = 0; s[b] != '\0'; b++)
+	for (b = 0; accept[b] != '\0'; b++)
 {
 	if (s[a] = accept[b])
 {
@@ -23,6 +23,5 @@ unsigned int _strspn(char *s, char *accept)
 }
 }
 }
-	else
 	return (c);
 }
