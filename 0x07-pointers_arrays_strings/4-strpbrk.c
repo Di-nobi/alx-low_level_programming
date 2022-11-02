@@ -2,9 +2,9 @@
 
 /**
  * _strpbrk - a function that searches a string for any set of bytes
- * @s: string
- * @accept: string
- * Return: char
+ * @s:string
+ * @accept:string
+ * Return:char
  */
 
 char *_strpbrk(char *s, char *accept)
@@ -14,6 +14,7 @@ char *_strpbrk(char *s, char *accept)
 	while (*s)
 {
 	for (a = 0; accept[a]; a++)
+		
 		if (*s == accept[a])
 {
 	return (s);
