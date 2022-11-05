@@ -2,7 +2,7 @@
 
 /**
  * main - a program that prints the number of arguments passed
- * @argc: int 
+ * @argc: int
  * @argv: string
  * Return: int
  */
