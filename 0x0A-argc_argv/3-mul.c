@@ -4,7 +4,7 @@
  * main - prints out multiplication of two numbers
  * @argc: integer
  * @argv: string
- * Return: 1 if program does not receive two arguments otherwise 0
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int x, y, z;
 	
 	if (argc != 3)
-{		printf("Error\n");
+{	printf("Error\n");
 	return (1);
 }
 	else
