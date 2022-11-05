@@ -2,8 +2,9 @@
 #include <stdlib.h>
 
 /**
- * argc - a function that prints a name followed by a new line
- * @x: iterator
+ * main - a function that prints a name of a program
+ * @argc: The number of the arguments
+ * @argv: An array of the arguments passed
  * Return: 0
  */
 
