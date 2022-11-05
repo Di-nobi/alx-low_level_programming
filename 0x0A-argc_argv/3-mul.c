@@ -16,9 +16,10 @@ int main(int argc, char *argv[])
 	return (1);
 }
 	else
-	x = atoi(argv[1]);
+{	x = atoi(argv[1]);
 	y = atoi(argv[2]);
 	z = x * y;
-	printf("%i", z);
+	printf("%i\n", z);
+}	
 	return (0);
 }
