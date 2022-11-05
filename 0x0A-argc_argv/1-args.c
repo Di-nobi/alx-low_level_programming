@@ -8,9 +8,9 @@
  * Return: int
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char *argv[]_attribute_((unused)))
 {
-	printf("%i", argc);
+	printf("arg = %i", argc);
 	printf("\n");
 
 	return(0);
