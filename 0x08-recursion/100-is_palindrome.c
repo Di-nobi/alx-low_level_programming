@@ -25,7 +25,7 @@ int is_palind_recursive(char *s, int i, int j)
 		return (1);
 	if (i == j - 1)
 		return (s[i] == s[j]);
-	if (s[i] != s[j]);
+	if (s[i] != s[j])
 	return (0);
 	return (is_palind_recursive(s, i + 1, j - 1));
 }
