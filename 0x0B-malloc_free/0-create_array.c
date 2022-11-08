@@ -3,9 +3,10 @@
 #include <stdlib.h>
 
 /**
- * char-arrays - a function that creates an array of characters and initializes
+ * create-arrays - a function that creates an array of characters and initializes
  * it with a specific character
- * Return: NULL if size is zero
+ * @c: char
+ * @size:int
  * Return: apointer to an array or NULL if it fails
  */
 
@@ -14,7 +15,7 @@ char *create_array(unsigned int size, char c)
 	unsigned int a;
 	char *r;
 
-	r = malloc((size + 1) * sizeof(char));
+	r = malloc((size * sizeof(char));
 
 	if (size == 0)
 {
