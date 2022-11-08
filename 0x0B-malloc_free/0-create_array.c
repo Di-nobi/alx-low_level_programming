@@ -3,8 +3,7 @@
 #include <stdlib.h>
 
 /**
- * create-arrays - a function that creates an array of characters and initializes
- * it with a specific character
+ * Description:create-arrays
  * @c: char
  * @size:int
  * Return: apointer to an array or NULL if it fails
