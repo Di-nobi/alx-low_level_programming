@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * Description:create-arrays
+ * create_array - allocates space for an array
  * @c: char
  * @size:int
  * Return: apointer to an array or NULL if it fails
