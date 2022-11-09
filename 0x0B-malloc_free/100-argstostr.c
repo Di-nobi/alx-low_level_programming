@@ -32,8 +32,8 @@ char *argstostr(int ac, char**av)
 {
 	for (b = 0; av[a][b] != '\0'; b++)
 {
-	s[a] = av[x][y];
-	a++;
+	s[f] = av[a][b];
+	f++;
 }
 	s[a++] = '\n';
 }
