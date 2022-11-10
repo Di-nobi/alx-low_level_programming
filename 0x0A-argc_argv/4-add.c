@@ -9,7 +9,7 @@
  * Return: int
  */
 
-int main(int argc, char *argc[])
+int main(int argc, char *argv[])
 {
 	int x = 0, i, j;
 
