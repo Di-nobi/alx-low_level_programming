@@ -14,12 +14,13 @@ the cmp function does not return 0, or -1 if no match is fond
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int j;
+
 	j = 0;
 	if (array && cmp)
 {
 	while (j < size)
 {
-	if (cmp(array[j] != 0)
+	if (cmp(array[j] != 0))
 			return (j);
 }
 }
