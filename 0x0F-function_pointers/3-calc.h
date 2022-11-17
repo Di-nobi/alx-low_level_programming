@@ -1,5 +1,5 @@
-#ifndef PROJECT 3
-#define PROJECT 3
+#ifndef PROJECT_3
+#define PROJECT_3
 /**
  * struct operator - struct op
  * @op: operator
