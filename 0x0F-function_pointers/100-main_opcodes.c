@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int i, bytes;
 	char *address = (char *) main;
-	
+
 	i = 0;
 	if (argc != 2)
 {
@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
 	exit(1);
 }
 	bytes = atoi(argv[1]);
+
 	if (bytes < 0)
 {
 	printf("Error\n");
@@ -28,10 +29,12 @@ int main(int argc, char *argv[])
 	while (i < bytes)
 {
 	printf("%02x", address[i] & 0xFF);
+
 	if (i != bytes - 1)
-		printf(" ");
+	printf(" ");
 	i++;
 }
 	printf("\n");
+
 	return (0);
 }
