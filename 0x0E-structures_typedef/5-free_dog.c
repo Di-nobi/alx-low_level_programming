@@ -7,7 +7,7 @@
  * Return: Nothing
  */
 
-void free_dog(dog_t *de)
+void free_dog(dog_t *d)
 {
 	if (d)
 {
