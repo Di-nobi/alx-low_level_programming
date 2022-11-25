@@ -1,96 +1,41 @@
-#include <stdio.h>
-#include "lists.h"
-#include <stddef.h>
 #include <stdlib.h>
-
-
-
-/**
- * _strlen - function to get length of a string
- * @s: string
- * Return: Length of a array of characters
- */
-int _strlen(char *s)
-{
-int i;
-
-i = 0;
-while (s[i] != '\0')
-{
-i++;
-}
-return (i);
-}
-/**
- * _strdup - returns a pointer to a newly allocated space in memory, which
- * contains a copy of the string given as a parameter.
- * @str: string to copy
- * Return: Pointer
- */
-char *_strdup(const char *str)
-{
-int l = 0, i;
-char *s;
-
-if (str == NULL)
-return (0);
-
-while (*(str + l))
-l++;
-
-s = malloc(sizeof(char) * l + 1);
-
-if (s == 0)
-return (0);
-
-for (i = 0; i <= l; i++)
-*(s + i) = *(str + i);
-return (s);
-}
+#include <string.h>
+#include "lists.h"
 
 /**
- * add_node_end - adds a new node to a singly linked list at the end of it
- * @head: pointer to head of the singly linked list_t
- * @str: string to add to the new node
- * Return: the address of the new element, or NULL if it failed
+ * add_node_end - adds a new node at the end of a linked list
+ * @head: double pointer to the list_t list
+ * @str: string to put in the new node
+ *
+ * Return: address of the new element, or NULL if it failed
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-char *tmp;
-list_t *tmph;
-list_t *new_node = malloc(sizeof(list_t));
+	list_t *new;
+	list_t *temp = *head;
+	unsigned int len = 0;
 
-if (new_node == 0)
-return (0);
+	while (str[len])
+		len++;
 
-tmph = *head;
-if (str == 0)
-{
-new_node->str = 0;
-new_node->len = 0;
-}
-else
-{
-tmp = _strdup(str);
-if (tmp == 0)
-{
-free(new_node);
-return (0);
-}
-new_node->str = tmp;
-new_node->len = _strlen(tmp);
-}
-new_node->next = 0;
+	new = malloc(sizeof(list_t));
+	if (!new)
+		return (NULL);
 
-if (tmph == 0)
-{
-*head = new_node;
-}
-else
-{
-while (tmph->next != 0)
-tmph = tmph->next;
-tmph->next = new_node;
-}
-return (new_node);
+	new->str = strdup(str);
+	new->len = len;
+	new->next = NULL;
+
+	if (*head == NULL)
+	{
+		*head = new;
+		return (new);
+	}
+
+	while (temp->next)
+		temp = temp->next;
+
+	temp->next = new;
+
+	return (new);
 }
