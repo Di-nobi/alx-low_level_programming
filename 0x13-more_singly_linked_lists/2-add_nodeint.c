@@ -13,7 +13,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	
 	if (tmp != NULL)
 {
-	tmp->n;
+	tmp->n = n;
 	tmp->next = *head;
 	*head = tmp;
 	return (tmp);
