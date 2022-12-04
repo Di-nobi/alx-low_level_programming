@@ -8,12 +8,12 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-        int bitstatus;
+       unsigned long int bitstatus;
 
         if (index > 64)
                 return (-1);
+	
+	bitstatus = (index >> n) & 1;
 
-        bitstatus = (index >> n) & 1;
-
-        return (bitstatus);
+	return (bitstatus);
 }
