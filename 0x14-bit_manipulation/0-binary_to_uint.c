@@ -6,17 +6,26 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num = 0;
-	int j;
+        unsigned int sum;
+        unsigned int dec;
+        int i;
 
-	if (!b)
-		return (0);
+	 sum = 0;
+        dec = 1;
 
-	while (b[j] == '0' || b[j] == '1')
+        if (!b)
+        return (0);
+
+        for (i = 0; b[i]; i++)
 {
-	num << 1;
-	num = num + b[j] - '0';
-	j++;
+        if (b[i] != '0' && b[i] != '1')
+        return (0);
 }
-	return (num);
+        for (i = (i - 1); i >= 0; i--)
+{
+        if (b[i] == '1')
+                sum += dec;
+        dec *= 2;
+}
+return (sum);
 }
