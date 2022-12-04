@@ -11,9 +11,10 @@ int get_bit(unsigned long int n, unsigned int index)
        unsigned long int bitstatus;
 
         if (index > 64)
-                return (-1);
+{
+	       	return (-1);
+}
+	bitstatus = (n >> index) & 1;
 	
-	bitstatus = (index >> n) & 1;
-
 	return (bitstatus);
 }
