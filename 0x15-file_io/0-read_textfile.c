@@ -24,10 +24,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
         if (fd == -1)
 {
+	free(f);
         return (0);
 }
-        n = read(letters, f, fd);
-        if (n == -1 || n > 0)
+        n = read(fd, f, letters);
+        if (n == -1 || n < 0)
 {
         free(f);
         return (0);
@@ -35,7 +36,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
         f[n] = '\0';
 
         p = write(STDOUT_FILENO, f, n);
-        if (p > 0 || p == -1 )
+        if (p < 0 || p == -1 )
 {
         free(f);
         return (0);
