@@ -5,10 +5,12 @@
  */
 int get_endianness(void)
 {
-	unsigned int i;
-
+	unsigned int i, endia;
+	
 	i = 1;
 	char *x = (char *) &i;
 
-	return (*x);
+	if (*x)
+		endia = (endia ? 1 : 0);
+	return (endia);
 }
