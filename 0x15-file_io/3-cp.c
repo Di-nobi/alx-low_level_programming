@@ -33,7 +33,6 @@ int main(int argc, char *argv[])
 	if (file_to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
-
 	while ((rcheck = read(file_from, buff, 1024)) > 0)
 {
 	wcheck = write(file_to, buff, rcheck);
