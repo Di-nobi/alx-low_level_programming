@@ -32,10 +32,13 @@ int main(int argc, char *argv[])
         file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (file_to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
 
-	while ((rcheck = read(file_from, buff, 1024)) > 0 )
+		rcheck = read(file_from, buff, 1024);
+		wcheck = write(file_to, buff, rcheck);
+
+	while (rcheck > 0)
 {
-	wcheck = write(file_to, buff, 1024);
 		if (wcheck != rcheck)
         {
 		      dprintf(STDERR_FILENO, "Error: Cant write to %s\n", argv[2]);
