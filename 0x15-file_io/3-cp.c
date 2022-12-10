@@ -17,9 +17,10 @@ int main(int argc, char *argv[])
 {
         int file_from, file_to, rcheck, wcheck, ccheck1, ccheck2;
         char buff[1024];
+
         if (argc != 3)
                 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-        exit(99);
+        exit(97);
 
         file_from = open(argv[1], O_RDONLY);
         if (file_from == -1)
@@ -31,9 +32,11 @@ int main(int argc, char *argv[])
                 dprintf(STDERR_FILENO, "Error: Cant read from file %s", argv[2]);
         exit(99);
 	
-	while (rcheck = read(file_from, buff, 1024) > 0 )
+	rcheck = read(file_from, buff, 1024);
+	wcheck = write(file_to, buff, 1024);
+
+	while (rcheck > 0 )
 {
-		wcheck = write(file_to, buff, 1024);
 		if (wcheck != rcheck)
         {
 		      dprintf(STDERR_FILENO, "Error: Cant write to %s", argv[2]);
