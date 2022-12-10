@@ -33,12 +33,15 @@ int main(int argc, char *argv[])
 
         rcheck = read(file_from, buff, 1024);
         wcheck = write(file_to, buff, 1024);
-
-        if (wcheck != rcheck)
+	
+	while (rcheck > 0 )
+{
+		if (wcheck != rcheck)
         {
 		      dprintf(STDERR_FILENO, "Error: Cant write to %s", argv[2]);
                 exit(99);
         }
+}
 
         if (rcheck == -1)
         {
