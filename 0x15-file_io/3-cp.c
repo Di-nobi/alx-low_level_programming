@@ -28,10 +28,7 @@ int main(int argc, char *argv[])
         exit(98);
 
         file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-        if (file_to == -1)
-                dprintf(STDERR_FILENO, "Error: Cant read from file %s", argv[2]);
-        exit(99);
-	
+
 	rcheck = read(file_from, buff, 1024);
 	wcheck = write(file_to, buff, 1024);
 
@@ -54,7 +51,7 @@ int main(int argc, char *argv[])
                 dprintf(STDERR_FILENO, "Error: Cant close fd %d\n", file_from);
         exit(100);
         ccheck2 = close(file_to);
-        if (ccheck2 < 0)
+        if (ccheck2 == -1)
                 dprintf(STDERR_FILENO, "Error: Cant close fd %d\n", file_to);
         exit(100);
 
