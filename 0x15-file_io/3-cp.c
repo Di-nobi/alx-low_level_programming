@@ -34,11 +34,10 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 
-		rcheck = read(file_from, buff, 1024);
-		wcheck = write(file_to, buff, rcheck);
-
-	while (rcheck > 0)
+	while ((rcheck = read(file_from, buff, 1024)) > 0)
 {
+	wcheck = write(file_to, buff, rcheck);
+
 		if (wcheck != rcheck)
         {
 		      dprintf(STDERR_FILENO, "Error: Cant write to %s\n", argv[2]);
