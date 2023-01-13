@@ -3,9 +3,9 @@
 /**
  * print_dlistint - prints a  doubly linked list
  * @h: pointer to the list
- * Retrun: number of nodes in the list
+ * Return: number of nodes in the list
  */
-size3_t print_dlistint(const dlistint_t *h)
+size_t print_dlistint(const dlistint_t *h)
 {
 	size_t num = 0;
 
