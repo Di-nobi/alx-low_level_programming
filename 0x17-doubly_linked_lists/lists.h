@@ -13,7 +13,7 @@
  */
 typedef struct dlistint
 {
-	int data;
+	int n;
 	struct dlistint *prev;
 	struct dlistint *next;
 } dlistint_t;

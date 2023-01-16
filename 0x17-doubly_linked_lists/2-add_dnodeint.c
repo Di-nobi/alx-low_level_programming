@@ -13,7 +13,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	{
 		tmp->n = n;
 		tmp->next = *head;
-		*head = tmp
+		*head = tmp;
 			return (tmp);
 	}
 	else
