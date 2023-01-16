@@ -3,7 +3,7 @@
  * add_node - adds a new node at the beginning of a dlistint_t list
  * @n: integer
  * @head: head
- * Return: Address of new element, or NULL if failed
+ * Return: address of new element, or NULL if failed
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
@@ -13,6 +13,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	{
 		tmp->n = n;
 		tmp->next = *head;
+		tmp->prev = NULL;
 		*head = tmp;
 			return (tmp);
 	}
