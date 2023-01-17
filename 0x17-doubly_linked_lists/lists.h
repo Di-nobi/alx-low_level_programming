@@ -11,7 +11,7 @@
  * @next: next node
  * Description: doubly linked list node
  */
-typedef struct dlistint
+typedef struct dlistint_s
 {
 	int n;
 	struct dlistint *prev;
