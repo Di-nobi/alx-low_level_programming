@@ -6,7 +6,7 @@
 #include <unistd.h>
 /*
  * struct dlistint - doubly linked list
- * @data: integer
+ * @n: integer
  * @prev: previous node
  * @next: next node
  * Description: doubly linked list node
