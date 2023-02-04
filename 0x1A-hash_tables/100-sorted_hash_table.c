@@ -1,4 +1,4 @@
-#include "hash.h"
+#include "hash_tables.h"
 /**
  * shash_table_create - Creates a sorted hash table.
  * @size: The size of new sorted hash table.
@@ -74,7 +74,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		free(new);
 		return (0);
 	}
-	new->value = value_copy;
+	new->value = arg_copy;
 	new->next = ht->array[index];
 	ht->array[index] = new;
 
@@ -109,57 +109,6 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	return (1);
 }
 /**
- * shash_table_get - Retrieve the value associated with
- * a key in a sorted hash table.
- * @ht: A pointer to the sorted hash table.
- * @key: The key to get the value of.
- *
- * Return: If the key cannot be matched - NULL.
- * Otherwise - the value associated with key in ht.
- */
-char *shash_table_get(const shash_table_t *ht, const char *key)
-{
-	shash_node_t *node;
-	unsigned long int index;
-
-	if (ht == NULL || key == NULL || *key == '\0')
-		return (NULL);
-
-	index = key_index((const unsigned char *)key, ht->size);
-	if (index >= ht->size)
-		return (NULL);
-
-	node = ht->shead;
-	while (node != NULL && strcmp(node->key, key) != 0)
-		node = node->snext;
-
-	return ((node == NULL) ? NULL : node->value);
-}
-/**
- * shash_table_print - prints a hash table
- * @ht: hash table to print
- */
-void shash_table_print(const shash_table_t *ht)
-{
-	shash_node_t *head = NULL;
-
-	if (!ht)
-		return;
-
-	head = ht->shead;
-
-	printf("{");
-	while (head)
-	{
-		printf("'%s': '%s'", head->key, head->value);
-		if (head->snext)
-			printf(", ");
-		head = head->snext;
-	}
-
-	printf("}\n");
-}
-/**
  * shash_table_print_rev - prints a hash table in reverse
  * @ht: hash table to print
  */
@@ -178,123 +127,6 @@ void shash_table_print_rev(const shash_table_t *ht)
 		printf("'%s': '%s'", tail->key, tail->value);
 		if (tail->sprev)
 			printf(", ");
-		tail = tail->sprev;
-	}
-
-	printf("}\n");
-}
-/**
- * shash_table_print_rev - prints a hash table in reverse
- * @ht: hash table to print
- */
-void shash_table_print_rev(const shash_table_t *ht)
-{
-	shash_node_t *tail = NULL;
-
-	if (!ht)
-		return;
-
-	tail = ht->stail;
-
-	printf("{");
-	while (tail)
-	{
-		printf("'%s': '%s'", tail->key, tail->value);
-		if (tail->sprev)
-			printf(", ");
-		tail = tail->sprev;
-	}
-
-	printf("}\n");
-}
-/**
- * shash_table_print_rev - prints a hash table in reverse
- * @ht: hash table to print
- */
-void shash_table_print_rev(const shash_table_t *ht)
-{
-	shash_node_t *tail = NULL;
-
-	if (!ht)
-		return;
-
-	tail = ht->stail;
-
-	printf("{");
-	while (tail)
-	{
-		printf("'%s': '%s'", tail->key, tail->value);
-		if (tail->sprev)
-			printf(", ");
-		tail = tail->sprev;
-	}
-
-	printf("}\n");
-}
-
-/**
- * shash_table_print_rev - prints a hash table in reverse
- * @ht: hash table to print
- */
-void shash_table_print_rev(const shash_table_t *ht)
-{
-	shash_node_t *tail = NULL;
-
-	if (!ht)
-		return;
-
-	tail = ht->stail;
-
-	printf("{");
-	while (tail)
-	{
-		printf("'%s': '%s'", tail->key, tail->value);
-		if (tail->sprev)
-			printf(", ");
-		tail = tail->sprev;
-	}
-
-	printf("}\n");
-}
-/**
- * shash_table_print_rev - prints a hash table in reverse
- * @ht: hash table to print
- */
-void shash_table_print_rev(const shash_table_t *ht)
-{
-	shash_node_t *tail = NULL;
-
-	if (!ht)
-		return;
-
-	tail = ht->stail;
-
-	printf("{");
-	while (tail)
-	{
-		printf("'%s': '%s'", tail->key, tail->value);
-		if (tail->sprev)
-			printf(", ");
-		tail = tail->sprev;
-	}
-
-	printf("}\n");
-}
-/**
- * shash_table_rev - prints a hash table in reverse
- * @ht: hash table to print
- */
-void shash_table_rev(const shash_table_t *ht)
-{
-	shash_node_t *tail = NULL;
-	if (!ht)
-		return;
-	tail = ht->stail;
-
-	printf("{");
-	while (tail)
-	{
-		printf("'%s' : '%s'", tail->key, tail->value);
 		tail = tail->sprev;
 	}
 
