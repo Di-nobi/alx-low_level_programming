@@ -27,15 +27,15 @@ int binary_search(int *array, size_t size, int value)
 		midian = (low + high) / 2;
 		if (array[midian] == value)
 		{
-			return midian;
+			return (midian);
 		}
-		else if (array[midian] > value)
+		else if (array[midian] < value)
 		{
-			high = midian - 1;
+			low = midian + 1;
 		}
 		else
 		{
-			low = midian + 1;
+			high = midian - 1;
 		}
 	}
 	return (-1);
