@@ -1,6 +1,6 @@
 #include "search_algos.h"
 /**
- * linear_search - A function that searches for a value in an array of integr
+ * linear_search - a function that searches for a value in an array of integr
  * @array: array of integers
  * @size: size of integers
  * @value: value to be found
