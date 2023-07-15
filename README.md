@@ -34,7 +34,7 @@
 
   ## Author✍️
 
-* **[Dinobi Udeh](https://twitter.com/udehdinobi)** <[Aysuarex](https://github.com/Di-nobi)>
+* **[Dinobi Udeh](https://twitter.com/udehdinobi)** <[Dinobi](https://github.com/Di-nobi)>
 
 ## Acknowledgements🙏
 
